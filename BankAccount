@@ -1,0 +1,64 @@
+package BankManagement;
+
+import java.util.Scanner;
+
+public class BankAccount {
+
+    private String name;
+    private int accountNumber;
+    private int pin;
+    private double balance;
+
+    // Create account
+    public void createAccount(Scanner sc) {
+        System.out.print("Enter Account Holder Name: ");
+        name = sc.nextLine();
+
+        System.out.print("Enter Account Number: ");
+        accountNumber = sc.nextInt();
+
+        System.out.print("Set 4-digit PIN: ");
+        pin = sc.nextInt();
+
+        balance = 0;
+        System.out.println("\nAccount created successfully!\n");
+    }
+
+    // Validate PIN
+    public boolean validatePin(Scanner sc) {
+        System.out.print("Enter PIN: ");
+        int enteredPin = sc.nextInt();
+        return enteredPin == pin;
+    }
+
+    // Deposit money
+    public void deposit(Scanner sc) {
+        System.out.print("Enter amount to deposit: ");
+        double amount = sc.nextDouble();
+
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Amount deposited successfully.");
+        } else {
+            System.out.println("Invalid amount.");
+        }
+    }
+
+    // Withdraw money
+    public void withdraw(Scanner sc) {
+        System.out.print("Enter amount to withdraw: ");
+        double amount = sc.nextDouble();
+
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Please collect your cash.");
+        } else {
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+    }
+
+    // Check balance
+    public void checkBalance() {
+        System.out.println("Current Balance: ₹" + balance);
+    }
+}
