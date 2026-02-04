@@ -1,0 +1,52 @@
+==== BANK MANAGEMENT SYSTEM ====
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. Exit
+Enter your choice: 1
+Enter Account Holder Name: mumshad
+Enter Account Number: 12345
+Set 4-digit PIN: 1234
+
+Account created successfully!
+
+
+==== BANK MANAGEMENT SYSTEM ====
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. Exit
+Enter your choice: 2
+Enter PIN: 1234
+Enter amount to deposit: 10000
+Amount deposited successfully.
+
+==== BANK MANAGEMENT SYSTEM ====
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. Exit
+Enter your choice: 3
+Enter PIN: 1234
+Enter amount to withdraw: 450
+Please collect your cash.
+
+==== BANK MANAGEMENT SYSTEM ====
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. Exit
+Enter your choice: 4
+Enter PIN: 1234
+Current Balance: ₹9550.0
+
+==== BANK MANAGEMENT SYSTEM ====
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. Exit
