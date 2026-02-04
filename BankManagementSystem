@@ -1,0 +1,67 @@
+package BankManagement;
+
+import java.util.Scanner;
+
+public class BankManagementSystem {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        BankAccount account = new BankAccount();
+        int choice;
+
+        while (true) {
+            System.out.println("==== BANK MANAGEMENT SYSTEM ====");
+            System.out.println("1. Create Account");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Check Balance");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+
+            choice = sc.nextInt();
+            sc.nextLine(); // clear buffer
+
+            switch (choice) {
+
+                case 1:
+                    account.createAccount(sc);
+                    break;
+
+                case 2:
+                    if (account.validatePin(sc)) {
+                        account.deposit(sc);
+                    } else {
+                        System.out.println("Incorrect PIN!");
+                    }
+                    break;
+
+                case 3:
+                    if (account.validatePin(sc)) {
+                        account.withdraw(sc);
+                    } else {
+                        System.out.println("Incorrect PIN!");
+                    }
+                    break;
+
+                case 4:
+                    if (account.validatePin(sc)) {
+                        account.checkBalance();
+                    } else {
+                        System.out.println("Incorrect PIN!");
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Thank you for using the Bank Management System!");
+                    sc.close();
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid choice!");
+            }
+
+            System.out.println();
+        }
+    }
+}
